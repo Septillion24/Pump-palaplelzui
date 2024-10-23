@@ -37,7 +37,16 @@ export default class ExerciseRepo {
 				)
 		);
 	}
-
+	getAllExcercises() {
+		return [[
+			new Exercise(1, 'Bench Press', 3, 10, [100, 105, 110], 1, 1),
+			new Exercise(2, 'Squat', 4, 8, [120, 130, 135, 140], 2, 2),
+			new Exercise(3, 'Deadlift', 3, 5, [150, 160, 170], 3, 2),
+			new Exercise(4, 'Shoulder Press', 3, 12, [50, 55, 60], 4, 3),
+			new Exercise(5, 'Pull-up', 3, 10, [], 5, 4), // No weights for bodyweight exercise
+			new Exercise(6, 'Bicep Curl', 3, 15, [25, 30, 35], 6, 5),
+		  ]]
+	}
 	getExerciseById(exerciseId: number) {
 		return this.exercises.find((exercise) => exercise.exerciseId === exerciseId);
 	}

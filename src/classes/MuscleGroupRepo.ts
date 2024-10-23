@@ -27,7 +27,15 @@ export default class MuscleGroupRepo {
 				new MuscleGroup(muscleGroup.muscle_group_id, muscleGroup.name, muscleGroup.exerciseIds)
 		);
 	}
-
+	getAllMuscleGroups() {
+		return [
+			new MuscleGroup(1, 'Chest', [1]), // Exercise ID 1 corresponds to Bench Press
+			new MuscleGroup(2, 'Legs', [2, 3]), // Exercise IDs 2 and 3 correspond to Squat and Deadlift
+			new MuscleGroup(3, 'Shoulders', [4]), // Exercise ID 4 corresponds to Shoulder Press
+			new MuscleGroup(4, 'Back', [5]), // Exercise ID 5 corresponds to Pull-up
+			new MuscleGroup(5, 'Arms', [6]), // Exercise ID 6 corresponds to Bicep Curl
+		  ]
+	}
 	getMuscleGroupById(muscleGroupId: number) {
 		return this.muscleGroups.find((muscleGroup) => muscleGroup.muscleGroupId === muscleGroupId);
 	}

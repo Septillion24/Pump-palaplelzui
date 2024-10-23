@@ -1,4 +1,18 @@
-<script>
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import type Workout from '../../classes/Workout';
+
+	onMount(async () => {
+		console.log('beaning');
+		let workouts: Workout[] = await fetch('/api/get/workouts', {
+			method: 'GET',
+			headers: { 'Content-Type': 'application/json' }
+		}).then((res) => 
+			res.json()
+		);
+		console.log(workouts);
+	});
+
 	let workouts = [
 		{ title: 'pull', numberOfExercises: '0', content: 'Details for Workout 1' },
 		{ title: 'Workout 2', numberOfExercises: '0', content: 'Details for Workout 2' },

@@ -34,7 +34,7 @@ export default class WorkoutRepo {
 	getWorkouts() {
 		return this.workouts;
 	}
-	getAllWorkouts()
+	static getAllWorkouts()
 	{
 		return [new Workout(
 			101,                // workoutId

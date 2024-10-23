@@ -1,5 +1,5 @@
-import sql from '$lib/databaseConnection';
-import Workout from './workout';
+import sql from '$lib/DatabaseConnection';
+import Workout from './Workout';
 export default class WorkoutRepo {
 	workouts: Workout[] = [];
 	initialized: boolean = false;

@@ -1,5 +1,5 @@
-import sql from '$lib/databaseConnection';
-import MuscleGroup from './muscleGroup';
+import sql from '$lib/DatabaseConnection';
+import MuscleGroup from './MuscleGroup';
 export default class MuscleGroupRepo {
 	muscleGroups: MuscleGroup[] = [];
 	initialized: boolean = false;
